@@ -59,6 +59,7 @@ main() {
 	    ;;
     esac
     configure_flags+=(--extra-cflags="${extra_cflags}")
+    configure_flags+=(--build-static)
 
     ./configure "${configure_flags[@]}"
     make -j 2
